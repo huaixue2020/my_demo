@@ -31,9 +31,9 @@ public class Student {
      *
      * @ExcelIgnore：写出的表格不包含该注解标识的字段
      * @ColumnWidth(10)：设置列宽度为10
-     * @ExcelProperty(value = "性别", index = 2)：该列名由sex->性别；排表格第 3 列。默认排列顺序为类中字段顺序，被跳过的列为空白列
-     * @DateTimeFormat("yyyy-MM-dd")，日期格式化，参照
-     * @NumberFormat("#.##%")，小数格式化；保留2位小数，并转化为 %
+     * @ExcelProperty(value = "性别", index = 2)：该列名由sex->性别；排表格第 3
+     *                      列。默认排列顺序为类中字段顺序，被跳过的列为空白列 @DateTimeFormat("yyyy-MM-dd")，日期格式化，参照 @NumberFormat("#.##%")，小数格式化；保留2位小数，并转化为
+     *                      %
      */
 
     /**
@@ -55,15 +55,14 @@ public class Student {
     private Date birthday;
 
     /**
-     * 复杂表头：|     地址     |
-     *          | 省 | 市 | 区 |
+     * 复杂表头：| 地址 | | 省 | 市 | 区 |
      */
-    @ExcelProperty({"地址", "省"})
-    private String province;
-    @ExcelProperty({"地址", "市"})
-    private String city;
-    @ExcelProperty({"地址", "区"})
-    private String area;
+    // @ExcelProperty({"地址", "省"})
+    // private String province;
+    // @ExcelProperty({"地址", "市"})
+    // private String city;
+    // @ExcelProperty({"地址", "区"})
+    // private String area;
 
     /**
      * 电话
