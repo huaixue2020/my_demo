@@ -13,6 +13,7 @@
     <modules>
         <module>m_kaptcha</module>
         <module>m_easyexcel</module>
+        <module>m_jwt</module>
     </modules>
 
     <groupId>com.demo</groupId>

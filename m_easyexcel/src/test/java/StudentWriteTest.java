@@ -2,6 +2,7 @@ import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.write.merge.LoopMergeStrategy;
 import com.alibaba.excel.write.metadata.WriteSheet;
+import com.demo.Demo;
 import com.demo.Student;
 import org.junit.Before;
 import org.junit.Test;
@@ -93,5 +94,14 @@ public class StudentWriteTest {
         // 工作簿对象
         LoopMergeStrategy loopMergeStrategy = new LoopMergeStrategy(2, 0);
         EasyExcel.write(file, Student.class).registerWriteHandler(loopMergeStrategy).sheet("模板").doWrite(initData());
+    }
+
+    @Test
+    public void t4(){
+        // 文件生成地址
+        File file = new File(filePath, "student.xlsx");
+        List<Demo> demos = new ArrayList<>();
+        demos.add(new Demo(1,"{name}",19));
+        EasyExcel.write(file, Demo.class).sheet().doWrite(demos);
     }
 }
